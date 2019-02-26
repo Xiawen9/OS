@@ -3,7 +3,6 @@
 
 #ifndef __ASSEMBLER__
 
-<<<<<<< HEAD
 /** 
  * @defgroup types types
  * @{ 
@@ -11,23 +10,11 @@
 
 /**
  * Restrict bit operations.
+ * @see http://kerneltrap.org/node/3848
  */
 #if 0
 #define BITWISE \
     __attribute__((bitwise))
-=======
-/**
- * @defgroup types types
- * @{
- */
-
-/**
- * Restrict bit operations. 
- * Ensure that variables are in the same bitwise manner.
- */
-#if 0
-#define BITWISE __attribute__((bitwise))
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 #else
 #define BITWISE
 #endif
@@ -58,11 +45,7 @@ typedef unsigned char u8;
 /**
  * @}
  */
-<<<<<<< HEAD
  
-=======
-
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 /**
  * @name Signed integers.
  * @{
@@ -92,6 +75,7 @@ typedef signed char s8;
 
 /**
  * @name Bitwise checked integers.
+ * @see http://kerneltrap.org/node/3848
  * @{
  */
 
@@ -114,24 +98,16 @@ typedef u16 BITWISE le16;
 typedef u16 BITWISE be16;
 
 /** Unsigned 8-bit little endian number. */
-<<<<<<< HEAD
 typedef u8  BITWISE le8;
 
 /** Unsigned 8-bit big endian number. */
 typedef u8  BITWISE be8;
-=======
-typedef u8 BITWISE le8;
-
-/** Unsigned 8-bit big endian number. */
-typedef u8 BITWISE be8;
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 
 /**
  * @}
  */
 
 /** Any sane size indicator cannot go negative. */
-<<<<<<< HEAD
 typedef unsigned int Size;
 
 /** A memory address. */
@@ -142,23 +118,10 @@ typedef unsigned short UserID;
 
 /** Group Identity. */
 typedef unsigned short GroupID;
-=======
-typedef uint Size;
-
-/** A memory address. */
-typedef ulong Address;
-
-/** User Identity. */
-typedef u16 UserID;
-
-/** Group Identity. */
-typedef u16 GroupID;
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 
 /** Process Identification Number. */
 typedef u16 ProcessID;
 
-<<<<<<< HEAD
 /**                                                                                   
  * Describes a device ID number.                                                      
  */                                                                                   
@@ -169,18 +132,6 @@ typedef struct DeviceID
 
     /** Device specific minor ID number. */
     u16 minor;
-=======
-/**
- * Describes a device ID number.
- */
-typedef struct DeviceID
-{
-	/** Major device ID number is a PID. */
-	ProcessID major;
-	
-	/** Device specific minor ID number. */
-	u16 minor;
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 }
 DeviceID;
 
@@ -191,7 +142,6 @@ DeviceID;
 typedef slong Error;
 
 #ifdef __cplusplus
-<<<<<<< HEAD
 
 namespace Number
 {
@@ -204,19 +154,6 @@ namespace Number
         Hex, /** Hexadecimal: 0x0-0xf */
     }
     Base;
-=======
- namespace Number
-{
-	/**
-	 * Numeral system base type.
-	 */
-	typedef enum Base
-	{
-		Dec, /** Decimal: 0-10 */
-		Hex, /** Hexadecimal: 0x0-0xf */
-	}
-	Base;
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 };
 
 #endif /* __cplusplus */
@@ -225,11 +162,5 @@ namespace Number
  * @}
  */
 
-<<<<<<< HEAD
 #endif /* __ASSEMBLER__ */
 #endif /* __TYPES_H */
-=======
-#endif /** __ASSEMBLER__ */
-#endif /** __TYPES_H */
-
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03

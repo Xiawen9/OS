@@ -3,11 +3,9 @@
 
 #include "Types.h"
 
-<<<<<<< HEAD
 #define TRUE		1
 #define FALSE		0
 
-=======
 /** Binary 1 means true. */
 #define TRUE		1
 
@@ -15,12 +13,10 @@
 #define FALSE		0
 
 /** NULL means zero. */
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 #ifndef NULL
 #define NULL		(void *)0
 #endif
 
-<<<<<<< HEAD
 #define ZERO		0
 #define QUOTE(x)  #x
 #define IQUOTE(x) QUOTE(x)
@@ -38,7 +34,6 @@
 #define UINT_MIN 0U
 #define UINT_MAX 4294967295U
 
-=======
 /** Zero value. */
 #define ZERO		0
 
@@ -85,30 +80,24 @@
  * @param divisor Divisor number.
  * @return Ceiled number.
  */
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 #define CEIL(number,divisor) \
     ( (number) % (divisor) ?  \
      ((number) / (divisor)) + 1 : (number) / (divisor))
 
 #ifdef __cplusplus
 
-<<<<<<< HEAD
-=======
 /**
  * Absolute value of a double.
  */
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
+
 inline double doubleAbsolute(double number)
 {
     return number < 0 ? -number : number;
 }
 
-<<<<<<< HEAD
-=======
 /**
  * Compare two doubles using a epsilon number as precision indicator.
  */
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 inline bool doubleEquals(double a, double b, double epsilon)
 {
     return doubleAbsolute(a - b) < epsilon;
@@ -128,12 +117,9 @@ inline bool doubleEquals(double a, double b, double epsilon)
 #define C
 #endif /* c_plusplus */
 
-<<<<<<< HEAD
 #define SECTION(s) \
     __attribute__((__section__(s)))
 
-
-=======
 /**
  * Can be used to link a symbol inside a specific section.
  * @param s Section name.
@@ -144,7 +130,6 @@ inline bool doubleEquals(double a, double b, double epsilon)
 /**
  * Declares an symbol to be forcibly "used".
  */
->>>>>>> 8e709b3c8584ffb4d552fdfddbc2e262bb76ed03
 #define USED \
     __attribute__((__used__))
 
