@@ -1,0 +1,8 @@
+Import('build_env')
+
+env = build_env.Clone()
+
+if env['ARCH'] == 'arm':
+    env.UseLibraries(['libstd', 'libarch'])
+    env.UseServers([])
+    env.TargetLibrary('libi2c', [ Glob('*.cpp') ])

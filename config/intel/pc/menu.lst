@@ -1,0 +1,6 @@
+timeout 0
+
+title OS
+root (cd)
+kernel /boot/kernel
+module /boot/boot.img.gz

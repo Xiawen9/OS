@@ -1,0 +1,6 @@
+Import('build_env')
+
+env = build_env.Clone()
+env.UseLibraries(['libstd', 'libarch', 'libfs', 'libipc', 'libposix'])
+env.UseServers([])
+env.TargetLibrary('libusb', [ Glob('*.cpp') ])
